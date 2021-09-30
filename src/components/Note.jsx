@@ -1,14 +1,11 @@
 import React from 'react';
-import notes from '../notes'
 import "./styles.css";
 
-function Note(){
+function Note(props){
     return(
-        <div>
-            {notes.map((note) => <div className="note">
-                <h1>{note.title}</h1>
-                <p>{note.content}</p>
-            </div>)}
+        <div className="note">
+            <h1>{props.title}</h1>
+            <p>{props.content}</p>
         </div>
     );
 }
